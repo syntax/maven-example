@@ -28,7 +28,6 @@ class Authentication():
         # performs GET request given a license key and attempts to return its attributes
         try:
             resp = requests.get(f'http://161.35.164.117:5000/api/v1/licenses/{self.license}', headers=self.headers).json()
-            print(resp)
             self.hwid = resp['license']['HWID']
             self.devicename = resp['license']["device"]
             self.isBoundToUser = bool(resp['license']["boundToUser"])
