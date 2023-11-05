@@ -99,7 +99,7 @@ def validateUser(license):
                 pass
             else:
                 # license is bound to another machine, not the one it is attempting to be used on, hence quit program
-                print('ERORR: licenes already bound to another machine, quiting')
+                print('ERORR: license already bound to another machine, quiting')
                 quit()
     else:
         # license key is invalid, hence quit progam
