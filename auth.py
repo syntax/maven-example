@@ -12,7 +12,6 @@ API_KEY = 'test'
 
 class Authentication():
     def __init__(self, licenseid):
-        print(licenseid)
         self.license = licenseid
         self.hwid = None
         self.devicename = None
@@ -100,9 +99,9 @@ def validateUser(license):
                 pass
             else:
                 # license is bound to another machine, not the one it is attempting to be used on, hence quit program
-                print('sss')
+                print('ERORR: licenes already bound to another machine, quiting')
                 quit()
     else:
         # license key is invalid, hence quit progam
-        print('asdasdasdad')
+        print('ERROR: license is invalid, or not bound to a user, quiting')
         quit()
